@@ -1,43 +1,68 @@
 {
-  "name": "oct-console",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "oct-console",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@antv/data-set": "^0.11.8",
+        "@antv/g2": "^4.1.35",
+        "@craco/craco": "^6.4.0",
+        "@testing-library/jest-dom": "^5.11.4",
+        "@testing-library/react": "^11.1.0",
+        "@testing-library/user-event": "^12.1.10",
+        "antd": "^4.16.13",
+        "craco-antd": "^1.19.0",
+        "date-fns": "^2.27.0",
+        "history": "5",
+        "less-loader": "5.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "6",
+        "react-scripts": "4.0.3",
+        "typescript": "^4.4.4",
+        "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+        "start": "craco start",
+        "build": "craco build",
+        "test": "craco test",
+        "eject": "react-scripts eject"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.15",
+        "@types/lodash": "^4.14.176",
+        "@types/node": "^12.0.0",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "@typescript-eslint/eslint-plugin": "^5.7.0",
+        "@typescript-eslint/parser": "^5.7.0",
+        "craco-alias": "^3.0.1",
+        "craco-less": "^1.20.0",
+        "eslint": "^8.2.0",
+        "eslint-config-alloy": "^4.4.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.27.1",
+        "less": "^4.1.2",
+        "postcss-less": "^5.0.0",
+        "prettier": "^2.5.1",
+        "stylelint": "^14.1.0",
+        "stylelint-config-recommended": "^6.0.0",
+        "stylelint-config-standard": "^24.0.0",
+        "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
+        "stylelint-order": "^5.0.0",
+        "stylelint-z-index-value-constraint": "^1.1.0"
+    }
 }

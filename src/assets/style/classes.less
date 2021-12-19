@@ -1,0 +1,111 @@
+.frame {
+    margin: 0 24px;
+ }
+
+@textAligns: start, end ,  left, center, right,justify,match-parent;
+
+each(@textAligns, {
+    .hor-@{value} {
+        text-align: @value;
+    }
+});
+
+.flexable {
+    @flexDirections:row,column,row-reverse,column-reverse;
+    @alignItems: baseline, center, end, flex-end, flex-start, inherit, initial, normal, revert, self-end, self-start, start, stretch, unset;
+    @justifyContent:center, end, flex-end, flex-start, inherit, initial, left, normal, revert, right, space-around, space-between, space-evenly, start, stretch, unset;
+    @flexItems: auto, content, none, inherit, initial, unset;
+    @flexWraps:nowrap, wrap, wrap-reverse, inherit, initial, unset;
+
+    display: flex;
+
+    each(@flexItems, {
+        .flex-@{value} {
+            flex: @value;
+        }
+    });
+
+    each(@flexWraps,{
+        &.--@{value}{
+            flex-wrap: @value;
+        }
+    })
+    each(@alignItems, {
+        &.--main-@{value} {
+            justify-content: @value;
+         }
+    });
+
+    each(@alignItems, {
+        &.--cross-@{value} {
+            align-items: @value;
+        }
+    });
+
+    each(@flexDirections,{
+        &.--@{value} {
+            flex-direction: @value;
+        }
+    });
+}
+
+@reservedMarginPadding: 0, 1, 2, 4, 5, 8, 10, 15, 16, 20, 24, 25, 30, 32, 35, 40, 48;
+
+each(@reservedMarginPadding,{
+    .m-@{value}{
+        margin:@value*1px;
+    }
+    .mt-@{value}{
+        margin-top:@value*1px;
+    }
+    .mr-@{value}{
+        margin-right:@value*1px;
+    }
+    .mb-@{value}{
+        margin-bottom:@value*1px;
+    }
+    .ml-@{value}{
+        margin-left:@value*1px;
+    }
+    .mh-@{value}{
+        margin-left:@value*1px;
+        margin-right:@value*1px;
+    }
+    .mv-@{value}{
+        margin-top:@value*1px;
+        margin-bottom:@value*1px;
+    }
+    .ma-@{value}{
+        margin:@value*1px auto;
+    }
+    .p-@{value}{
+        padding:@value*1px;
+    }
+    .pt-@{value}{
+        padding-top:@value*1px;
+    }
+    .pr-@{value}{
+        padding-right:@value*1px;
+    }
+    .pb-@{value}{
+        padding-bottom:@value*1px;
+    }
+    .pl-@{value}{
+        padding-left:@value*1px;
+    }
+    .ph-@{value}{
+        padding-left:@value*1px;
+        padding-right:@value*1px;
+    }
+    .pv-@{value}{
+        padding-top:@value*1px;
+        padding-bottom:@value*1px;
+    }
+});
+
+.theme-back {
+    background-color: @theme-back;
+}
+.theme-fore {
+    color: @theme-fore;
+}

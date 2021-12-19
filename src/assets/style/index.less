@@ -1,0 +1,27 @@
+@import "~antd/dist/antd.less";
+@import "./reset";
+@import "./theme/index";
+@import "./classes";
+@import "./hoc";
+
+/** 公共区块样式 - 左侧导航 */
+.oc-navigator.ant-menu {
+    width: 256px;
+
+    border-right: none;
+    background-color: transparent;
+    
+}
+.oc-page-wrap {
+    width: 85%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.oc-page-header.ant-page-header {
+    padding: 0 0 16px;
+    .ant-page-header-heading-title {
+        font-size: 26px;
+        font-weight: normal;
+        line-height: 36px;
+    }
+}

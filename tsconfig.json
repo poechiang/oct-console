@@ -1,8 +1,10 @@
 {
+  "extends": "./tsconfig.extend.json",
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
+      "ES2017",
       "dom.iterable",
       "esnext"
     ],
@@ -21,6 +23,16 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.js",
+    "src/**/*.tsx",
+    "*.js",
+    ".prettierrc.js"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es"
   ]
 }

@@ -1,0 +1,58 @@
+.oc-editable-wrap {
+    position: relative;
+
+    box-sizing: border-box;
+    min-height: 1em;
+
+    cursor: text;
+
+    border: 1px dashed transparent;
+
+    :focus {
+        outline: none;
+    }
+
+    .icon-panel { 
+        position: absolute; 
+        top: .4em; 
+        right: .5em;
+
+        display: none;
+
+        font-size: 12px;
+
+        .anticon {
+            &.close, &.ok, &.undo {
+                cursor: pointer;
+            }
+            &.undo {
+                color: #787878;
+            }
+            &.close {
+                color: #ff5722;
+            }
+            &:not(:last-child) {
+                display: inline-block;
+
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &:hover, &.editing {
+        border-color: @input-hover-border-color;
+
+        .icon-panel {
+            display: inline-flex;
+
+            color: @input-hover-border-color;
+        }
+    }
+
+    &:focus-within, &.editing {
+        border-style: solid;
+        border-color: @input-hover-border-color;
+        border-radius: @border-radius-base;
+        box-shadow: @input-outline-offset @outline-blur-size @outline-width fade(@outline-color, @outline-fade);
+    }
+}

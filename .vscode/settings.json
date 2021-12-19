@@ -1,0 +1,9 @@
+{
+    "stylelint.configFile": ".stylelintrc.js",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": true,
+        "source.fixAll.eslint": true,
+        "source.fixAll.prettier": true
+    }
+}
